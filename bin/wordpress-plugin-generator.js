@@ -2,7 +2,6 @@
 
 'use strict';
 
-const { exitOverride } = require('commander');
 // import modules
 const program = require('commander');
 const fs = require('fs');
@@ -18,17 +17,17 @@ program.version('0.0.1', '-v --version')
 const options = program.opts();
 const debug = options.debug;
 if (debug) {
-  console.log("Debug Mode = ON");
-  console.log("=== Use Option ===");
+  console.log('Debug Mode = ON');
+  console.log('=== Use Option ===');
   console.log(options);
-  console.log("=== Use Option ===");
+  console.log('=== Use Option ===');
 }
 
 let configPath = './config.json';
 if (options.configFile) {
   configPath = options.configFile;
   if (debug) {
-    console.log("Switch config file path. Use " + configPath);
+    console.log('Switch config file path. Use ' + configPath);
   }
 }
 
@@ -43,7 +42,7 @@ if (debug) {
   console.log(configObject);
   console.log('=== Read config file ===');
 }
-if (!config.validate(configPath)) {
+if (!config.validate(configObject)) {
   console.error('Not valid config file.');
   process.exit(1);
 }
@@ -52,4 +51,4 @@ if (options.test !== undefined && options.test) {
   process.exit(0);
 }
 
-generator(configPath);
+generator(configObject);
