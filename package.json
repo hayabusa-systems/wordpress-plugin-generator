@@ -1,0 +1,30 @@
+{
+  "name": "wordpress-plugin-generator",
+  "version": "0.0.1",
+  "description": "Generate code for Wordpress plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayabusa-systems/wordpress-plugin-generator.git"
+  },
+  "keywords": [
+    "wordpress"
+  ],
+  "author": "Hayato Nakamura <hayato.nakamura@hayabusa-systems.net> (https://hayabusa-systems.page/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hayabusa-systems/wordpress-plugin-generator/issues"
+  },
+  "homepage": "https://github.com/hayabusa-systems/wordpress-plugin-generator#readme",
+  "bin": {
+    "wordpress-plugin-generator": "bin/wordpress-plugin-generator.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
