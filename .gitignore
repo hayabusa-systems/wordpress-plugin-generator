@@ -105,3 +105,5 @@ dist
 
 # Local nodenv file
 .node-version
+
+*.zip
